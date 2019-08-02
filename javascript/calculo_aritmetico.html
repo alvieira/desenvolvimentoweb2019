@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cálculo aritmético</title>
+
+    <script>
+        var num1 = prompt('Digite o primeiro número:')
+        var operacao = prompt('Digite a operação desejada: soma ou subtração')
+        var num2 = prompt('Digite o segundo número:')
+
+        function calculo(num1, num2, operacao) {
+            num1 = parseFloat(num1)
+            num2 = parseFloat(num2)           
+
+            if (operacao === 'soma') {
+                return num1 + num2
+            } else if (operacao === 'subtração') {
+                return num1 - num2
+            } else {
+                return 'Operação informada não existe'
+            }
+        }
+
+        document.write('O resultado é: ' + calculo(num1, num2, operacao))
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

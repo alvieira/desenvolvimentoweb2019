@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funções datas</title>
+
+    <script>
+
+        var data = new Date()
+
+        // document.write(data.getDate()) // dia do mês
+        // document.write('</br >')
+
+        // document.write(data.getMonth() + 1) // mês (0-11)
+        // document.write('</br >')
+        
+        // document.write(data.getFullYear()) // ano
+        // document.write('</br >')
+
+        // document.write(data.getDate() + '/' + (data.getMonth() + 1) +  '/' + data.getFullYear())
+
+        // //adicionar / remover dias
+        // document.write(data.toString())
+        // data.setDate(data.getDate() + 1)
+        // document.write('<hr />')
+        // document.write(data.toString())
+        // document.write('<br /><br /><hr />')
+
+        // //adicionar / remover meses
+        // document.write(data.toString())
+        // data.setMonth(data.getMonth() - 1)
+        // document.write('<hr />')
+        // document.write(data.toString())
+        // document.write('<br /><br /><hr />')
+
+        // //adicionar / remover anos
+        // document.write(data.toString())
+        // data.setFullYear(data.getFullYear() + 2)
+        // document.write('<hr />')
+        // document.write(data.toString())
+
+        //16/06/2019
+        var data1 = new Date(2019,5,16)
+        
+        //22/07/2019
+        var data2 = new Date(2019,6,22)
+
+        document.write(data1.toString())
+        document.write('<hr />')
+        document.write(data2.toString())
+
+        document.write('<br /><br /><hr />')
+        //converter datas para algo que possamos calcular
+        document.write(data1.getTime())
+        document.write('<hr />')
+        document.write(data2.getTime())
+        // getTime() Returns the number of milliseconds since midnight Jan 1 1970, and a specified date
+
+        //encontrar a qtde de milisegundos entre data1 e data2
+        document.write('<br /><br /><hr />')        
+        document.write(data1.getTime() - data2.getTime())
+        document.write('<br />')
+        var milisegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        document.write(milisegundos_entre_datas)
+
+        // 1 dia tem 24 horas
+        // 1 hora tem 60 minutos
+        // 1 minuto tem 60 segundos
+        // 1 segundo tem 1000 milisegundos
+        // então quanto milisegundos existem em 1 dia?
+        document.write('<br />')
+        var milisegundos_por_dia = 1*24*60*60*1000
+        document.write('1 dia tem: ' + milisegundos_por_dia + ' milisegundos')
+        document.write('<hr />')
+        document.write('A diferença entre data1 e data2 é de ' + Math.ceil(milisegundos_entre_datas / milisegundos_por_dia) + ' dias')
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

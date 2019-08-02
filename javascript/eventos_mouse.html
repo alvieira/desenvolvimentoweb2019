@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos mouse</title>
+
+    <script>
+        function acao() {
+            alert('Evento mouse onclick disparado, o elemento foi clicado')
+        }
+
+        function acao2() {
+            alert('Evento mouse ondbclick disparado, o elemento foi clicado duas vezes')
+        }
+
+        function acao3() {
+            alert('Evento mouse onmouseup disparado, o usuário libera o botão do mouse sobre o elemento')
+        }
+
+        function acao4() {
+            alert('Evento mouse onmouseover disparado, o cursor passou sobre o elemento')
+        }
+
+        function acao5() {
+            alert('Evento mouse onmouseout disparado, o cursor deixou o elemento')
+        }
+    </script>
+
+</head>
+
+<body>
+    <div onclick="acao()" style="background: gray; height:100px; width: 100px; ">
+    </div>
+    <div ondblclick="acao2()" style="background: green; height:100px; width: 100px; ">
+    </div>
+    <div onmouseup="acao3()" style="background: hotpink; height:100px; width: 100px; ">
+    </div>
+    <div onmouseover="acao4()" style="background:yellow; height:100px; width: 100px; ">
+    </div>
+    <div onmouseout="acao5()" style="background:saddlebrown; height:100px; width: 100px; ">
+    </div>
+</body>
+
+</html>

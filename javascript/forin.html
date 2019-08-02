@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For in</title>
+
+    <script>
+
+        // var lista_convidados = ['Jorge', 'Carlos', 'Silvio', 'Ana', 'Kaka'] 
+        // usar o "for" não teria problema com esse tipo de array
+        // mas não ficaria ok com o array que segue
+        // já com o "forin", ambos funcionam normalmente
+
+        var lista_convidados = Array()
+
+        lista_convidados['a'] = 'Jorge'
+        lista_convidados[true] = 'Carlos'
+        lista_convidados['zebra'] = 'Silvio'
+        lista_convidados[-1] = 'Ana'
+        lista_convidados[10] = 'Kaka'
+
+        console.log(lista_convidados)
+
+        for (var x in lista_convidados) {
+            console.log('Índice ' + x + ' valor ' + lista_convidados[x])
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividades fixação section 8_2</title>
+
+    <script>
+
+        var objetos = Array('Cadeira', 'Impressora', 'Garfo')       
+
+        function adicionarObjeto() {
+
+            var objeto = document.getElementById('objeto').value            
+
+            if (objeto) {
+               
+                if (objetos.indexOf(objeto) === -1) {
+                    objetos.push(objeto)
+                    console.log(objetos)
+                    limpaObjeto()
+                } else {
+                    alert('Objeto já foi adicionado')
+                    limpaObjeto()
+                }
+            } else {
+                alert('Informe um valor válido')
+            }
+        }
+
+        function ordenaObjetos() {
+            objetos.sort()
+            console.log(objetos)
+        }
+
+        function limpaObjeto() {
+            document.getElementById('objeto').value = ''
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <input type="text" id="objeto" placeholder="Cadeira">
+    <button onclick="adicionarObjeto()">Adicionar</button>
+    <button onclick="ordenaObjetos()">Ordenar</button>
+
+</body>
+
+</html>
