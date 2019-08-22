@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // // escopo global, função e bloco
+        // var serie = 'Friends'
+
+        // function  x () {
+
+        //     var serie = 'GoT';
+
+        //     console.log('função: ' + serie)
+
+        //     if (true) {
+        //         console.log('bloco: ' + serie) 
+        //     }
+        // }
+
+        // x()
+
+        // if (true) {
+        //         console.log('global: ' + serie) 
+        // }
+
+        // if (true) {
+        //     let serie = 'Friends'
+        //     console.log(serie)
+        // }
+
+        // var serie = 'Friends'
+
+        // {
+        //     var serie = 'Got'
+        //     console.log('dentro do bloco: ' + serie)
+        // }
+
+        // console.log('fora do bloco: ' + serie)
+
+        let serie = 'Friends'
+
+        {
+            let serie = 'Got'
+            console.log('dentro do bloco: ' + serie)
+        }
+
+        console.log('fora do bloco: ' + serie)
+
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>
