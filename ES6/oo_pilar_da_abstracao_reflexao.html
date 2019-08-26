@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OO Pilar da Abstração Refexão</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+    // software para marcenaria
+
+    // paradigma procedural
+
+    // let qtde_pernas = 4
+    // let giratoria = false
+    // let cor = 'azul'
+
+    /*
+    let cadeiras = new Array()
+
+    cadeiras[0] = new Array()    
+    cadeiras[0]['qtde_pernas'] = 4
+    cadeiras[0]['giratoria'] = false
+    cadeiras[0]['cor'] = 'azul'
+
+    cadeiras[1] = new Array()
+    cadeiras[1]['qtde_pernas'] = 1
+    cadeiras[1]['giratoria'] = true
+    cadeiras[1]['cor'] = 'preto'    
+
+    function girar_cadeira(indice) {
+        if (cadeiras[indice] ['giratoria'] === true) {
+            console.log('girou')
+        } else {
+            console.log('cadeira não é giratória')
+        }
+    }
+
+    girar_cadeira(1)
+
+    function adicionar_cadeira(qtde_pernas, giratoria, cor) {
+        let cadeira = new Array()
+        cadeira['qtde_pernas'] = qtde_pernas
+        cadeira['giratoria'] = giratoria
+        cadeira['cor'] = cor
+
+        cadeiras.push(cadeira)
+    }
+
+    adicionar_cadeira(2,false,'roxo')
+
+    console.log(cadeiras)
+    */
+
+    // paradigma OO
+    class Cadeira {
+        constructor(qtde_pernas, giratoria, cor) {
+            this.qtde_pernas = qtde_pernas,
+            this.giratoria = giratoria,
+            this.cor = cor
+        }
+
+        girarCadeira() {
+            if (this.giratoria === true) {
+                console.log('girou')
+            } else {
+            console.log('cadeira não é giratória')
+            }
+        }
+    }
+
+    let cadeira = new Cadeira(4, false,'azul')
+    cadeira.girarCadeira()
+
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

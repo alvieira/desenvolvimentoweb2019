@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OO Pilar do Encapsulamento</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        class Tv {
+            constructor() {
+                this._relacaoCanais = new Array(2,4,5,7,10),
+                this._canalAtivo = 5,
+                this._volume = 5
+            }
+
+            //getters and setters
+            get canalAtivo() {
+                return this._canalAtivo
+            }
+
+            set canalAtivo(canal) {
+                //
+                if(this._relacaoCanais.indexOf(canal) !== -1) {
+                    this._canalAtivo = canal
+                }               
+                
+            }
+        }
+
+        let tv = new Tv()
+
+        tv.canalAtivo = 10 // pseudo-variavel. JS entende "canalAtivo" como se fosse set canalAtivo()
+        console.log('canal ativo: ' + tv.canalAtivo) // pseudo-variavel. JS entende "canalAtivo" como se fosse get canalAtivo()
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>
