@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destructuring Parte 2</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        let produto = {
+            descricao: 'Notebook',
+            preco: 1800,
+            detalhes: {
+                fabricante: 'abc',
+                modelo: 'xyz'
+            }
+        }
+
+        // token desctructuring
+        // array => []
+        // objeto => {}
+
+        //let { descricao, preco } = produto
+        // ou        
+        // console.log(descricao, preco)
+        //let { descricao: d, preco:p } = produto
+        //console.log(d, p)
+
+        let { descricao: d, preco:p, desconto = 50 } = produto
+        console.log(d, p, desconto)
+
+        // let { detalhes: {fabricante, modelo}} = produto
+        // console.log(fabricante,modelo)
+
+        let { detalhes: {fabricante: f, modelo}} = produto
+        console.log(f,modelo)
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
